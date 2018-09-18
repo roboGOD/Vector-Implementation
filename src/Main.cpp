@@ -1,5 +1,4 @@
 #include "Vector"
-#include <string>
 
 int main()
 {
@@ -27,12 +26,15 @@ int main()
     v.print();
     
     Vector<std::string> v2;
-    v2.append("Hello");
+    v2.append("Hello,");
     v2.append("I");
-    v2.append("roboGOD");
+    v2.append("roboGOD.");
     v2.insert(2, "Am");
     v2.print();
-
+    std::cout << v2.pop(0) << std::endl;
+    v2.print();
+    v2.pop(5);
+    v2.print();
     std::cin.get();
 }
 

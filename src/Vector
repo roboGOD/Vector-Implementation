@@ -34,6 +34,21 @@ public:
         m_arr[m_size-1] = data;
     }
     
+    T pop(int index)
+    {
+        T val;
+        if(index >= m_size || index < 0)
+        {
+            std::cout << "[Error] Can't remove element!\n\tArray index " << index << " is out of range." << std::endl;
+            return val;
+        }
+        m_size--;
+        val = m_arr[index];
+        for(int i=index; i<m_size; i++)
+            m_arr[i] = m_arr[i+1];
+        return val;
+    }
+    
     void insert(int index, T data)
     {
         m_size++;
